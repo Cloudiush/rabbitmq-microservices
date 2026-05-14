@@ -20,7 +20,7 @@ async function connectAndSend() {
 
     } catch (error) {
         console.log('⏳ Czekam na start RabbitMQ...');
-        setTimeout(connectAndSend, 3000); // Ponowienie próby
+        setTimeout(connectAndSend, 3000);
     }
 }
 
