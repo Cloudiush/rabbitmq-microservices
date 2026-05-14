@@ -9,7 +9,7 @@ async function connectAndSend() {
         const channel = await connection.createChannel();
         await channel.assertQueue(QUEUE, { durable: false });
 
-        console.log('✅ Producent połączony z RabbitMQ!');
+        console.log('Producent połączony z RabbitMQ!');
         let counter = 1;
 
         setInterval(() => {
@@ -19,7 +19,7 @@ async function connectAndSend() {
         }, 3000);
 
     } catch (error) {
-        console.log('⏳ Czekam na start RabbitMQ...');
+        console.log('Czekam na start RabbitMQ...');
         setTimeout(connectAndSend, 3000);
     }
 }

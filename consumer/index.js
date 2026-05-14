@@ -9,17 +9,17 @@ async function connectAndReceive() {
         const channel = await connection.createChannel();
         await channel.assertQueue(QUEUE, { durable: false });
 
-        console.log('✅ Konsument połączony z RabbitMQ! Czekam na zadania...');
+        console.log('Konsument połączony z RabbitMQ! Czekam na zadania...');
 
         channel.consume(QUEUE, (msg) => {
             if (msg !== null) {
                 console.log(`[✔] Przetworzono: '${msg.content.toString()}'`);
-                channel.ack(msg); // Potwierdzenie wykonania zadania
+                channel.ack(msg);
             }
         });
 
     } catch (error) {
-        console.log('⏳ Czekam na start RabbitMQ...');
+        console.log('Czekam na start RabbitMQ...');
         setTimeout(connectAndReceive, 3000);
     }
 }
