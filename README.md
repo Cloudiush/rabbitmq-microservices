@@ -14,10 +14,11 @@ Wymagania techniczne:
 - Użyto odchudzonych obrazów `alpine` dla bazy i aplikacji.
 - Wrażliwe dane (hasła, użytkownicy) są odseparowane od kodu i przekazywane przez plik `.env`.
 
-## Uruchomienie
-1. Upewnij się, że posiadasz plik `.env` z danymi autoryzacyjnymi.
-2. Uruchom projekt komendą:
+## Instrukcja uruchomienia
+1. Sklonuj repozytorium.
+2. Skopiuj plik `.env.example` do pliku `.env` (lub upewnij się, że plik `.env` istnieje w głównym katalogu) i zdefiniuj w nim porty:
+3. Uruchom projekt komendą:
    `docker-compose up -d --build`
-3. Aby zobaczyć przepływ danych w terminalu:
+4. Aby zobaczyć przepływ danych w terminalu:
    `docker-compose logs -f`
-4. Przeglądarkowy panel zarządzania RabbitMQ dostępny jest pod adresem: `http://localhost:15672` (Logowanie danymi z `.env`).
+5. Przeglądarkowy panel zarządzania RabbitMQ dostępny jest pod adresem: `http://localhost:15672` (Logowanie danymi z `.env`).
