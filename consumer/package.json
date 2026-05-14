@@ -1,0 +1,6 @@
+{
+  "name": "consumer",
+  "dependencies": {
+    "amqplib": "^0.10.3"
+  }
+}

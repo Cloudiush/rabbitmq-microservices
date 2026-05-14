@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      - RABBITMQ_DEFAULT_USER=${RABBITMQ_USER}
+      - RABBITMQ_DEFAULT_PASS=${RABBITMQ_PASS}
+    env_file:
+      - .env
+
+  producer:
+    build: ./producer
+    env_file:
+      - .env
+    depends_on:
+      - rabbitmq
+
+  consumer:
+    build: ./consumer
+    env_file:
+      - .env
+    depends_on:
+      - rabbitmq

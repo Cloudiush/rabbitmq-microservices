@@ -1,0 +1,6 @@
+{
+  "name": "producer",
+  "dependencies": {
+    "amqplib": "^0.10.3"
+  }
+}
