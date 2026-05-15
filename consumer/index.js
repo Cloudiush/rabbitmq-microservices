@@ -13,7 +13,7 @@ async function connectAndReceive() {
 
         channel.consume(QUEUE, (msg) => {
             if (msg !== null) {
-                console.log(`[✔] Przetworzono: '${msg.content.toString()}'`);
+                console.log(`Przetworzono: '${msg.content.toString()}'`);
                 channel.ack(msg);
             }
         });
