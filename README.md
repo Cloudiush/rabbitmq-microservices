@@ -13,8 +13,8 @@ Projekt prezentuje asynchroniczną komunikację między mikroserwisami.
 
 ## Instrukcja uruchomienia
 1. Sklonuj repozytorium.
-   git clone https://github.com/Cloudiush/rabbitmq-microservices.git
-   cd rabbitmq-microservices
+   `git clone https://github.com/Cloudiush/rabbitmq-microservices.git`
+   `cd rabbitmq-microservices`
 2. Skopiuj plik `.env.example` do pliku `.env`
 3. Uruchom projekt komendą:
    `docker-compose up -d --build`
