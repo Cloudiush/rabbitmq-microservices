@@ -12,7 +12,7 @@ Projekt prezentuje asynchroniczną komunikację między mikroserwisami.
 3. **Consumer:** Aplikacja Node.js, która nasłuchuje na kolejce, pobiera wiadomości i je "przetwarza".
 
 ## Instrukcja uruchomienia
-1. Sklonuj repozytorium.
+1. Sklonuj repozytorium:
    `git clone https://github.com/Cloudiush/rabbitmq-microservices.git`
    `cd rabbitmq-microservices`
 2. Skopiuj plik `.env.example` do pliku `.env`
