@@ -18,7 +18,9 @@ Projekt prezentuje asynchroniczną komunikację między mikroserwisami.
    cd rabbitmq-microservices
 2. Skopiuj plik `.env.example` do pliku `.env`
 3. Uruchom projekt komendą:
-   `docker-compose up -d --build`
+   ```bash
+   docker-compose up -d --build
 4. Aby zobaczyć przepływ danych w terminalu:
-   `docker-compose logs -f`
+   ```bash
+   docker-compose logs -f
 5. Przeglądarkowy panel zarządzania RabbitMQ dostępny jest pod adresem: `http://localhost:15672` (Logowanie danymi z `.env`).
